@@ -1,0 +1,195 @@
+:root {
+  --clr-primary-400: hsl(14, 45%, 36%);
+  --clr-primary-600: hsl(332, 51%, 32%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(330, 100%, 98%);
+  --clr-neutral-300: hsl(30, 54%, 90%);
+  --clr-neutral-400: hsl(30, 18%, 87%);
+  --clr-neutral-600: hsl(30, 10%, 34%);
+  --clr-neutral-900: hsl(24, 5%, 18%);
+
+  --ff-base: "Outfit", sans-serif;
+  --ff-secondary: "Young Serif", Serif;
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin-bottom: 0.5rem;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  /* font-family: var(--ff-base); */
+  background-color: var(--clr-neutral-300);
+  font-family: var(--ff-base);
+  color: var(--clr-neutral-600);
+  font-size: 16px;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+/* LIST STYLES */
+ul,
+ol {
+  list-style-position: outside;
+  margin: 0;
+  padding-inline: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+li::marker {
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-bolder);
+}
+
+.recipe-card {
+  background-color: var(--clr-neutral-100);
+  display: grid;
+  max-width: 735px;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+
+.recipe-card img {
+  border-radius: 0.5rem;
+}
+
+.recipe-content {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.section-title {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-regular);
+  font-size: 1.25rem;
+  color: var(--clr-primary-400);
+}
+
+header > .section-title {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  color: var(--clr-neutral-900);
+  margin-bottom: 1rem;
+}
+
+.prep-time {
+  background-color: hsl(332, 51%, 97%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.prep-time .section-title {
+  color: var(--clr-primary-600);
+  font-family: var(--ff-base);
+  font-size: 1.1rem;
+  font-weight: var(--fw-bolder);
+}
+
+.ingredients,
+.instructions {
+  border-bottom: var(--clr-neutral-400) 1px solid;
+}
+
+.nutrition table {
+  width: 100%;
+}
+.nutrition table tr td:first-child {
+  padding-left: 1.5rem;
+}
+.nutrition table td {
+  padding: 0.5rem;
+  border-bottom: var(--clr-neutral-400) 1px solid;
+}
+.nutrition table tr:last-child td {
+  border-bottom: none;
+}
+
+.nutrition table td:nth-child(2) {
+  color: var(--clr-primary-600);
+  font-weight: var(--fw-bolder);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 450px) {
+  .recipe-card {
+    padding: 0;
+    gap: 0;
+  }
+
+  .recipe-card img {
+    border-radius: 0;
+  }
+  .recipe-content {
+    padding: 1.5rem;
+  }
+}
