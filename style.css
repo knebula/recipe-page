@@ -136,8 +136,8 @@ li::marker {
 }
 
 header > .section-title {
-  font-size: 1.75rem;
-  line-height: 1.75rem;
+  font-size: 2rem;
+  line-height: 2rem;
   color: var(--clr-neutral-900);
   margin-bottom: 1rem;
 }
@@ -191,5 +191,8 @@ header > .section-title {
   }
   .recipe-content {
     padding: 1.5rem;
+  }
+  header > .section-title {
+    font-size: 1.75rem;
   }
 }
