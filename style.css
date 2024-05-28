@@ -89,6 +89,7 @@ body {
   font-size: 16px;
   display: grid;
   place-content: center;
+
   min-height: 100vh;
 }
 
@@ -194,5 +195,11 @@ header > .section-title {
   }
   header > .section-title {
     font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 750px) {
+  body {
+    padding: 5rem;
   }
 }
